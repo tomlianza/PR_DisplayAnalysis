@@ -1,0 +1,45 @@
+#ifndef DDC_QUALIFIER_STRINGS_H_INCLUDED
+#define DDC_QUALIFIER_STRINGS_H_INCLUDED
+
+#ifdef DRG_MONWORLD_TEST
+#define STR_HEADER "Displays Report %d"
+#define STR_BLANK ""
+#define STR_NUM_DISPLAYS			"%d displays found."
+#else
+#define STR_HEADER "Displays Report"
+#define STR_BLANK ""
+#define STR_NUM_DISPLAYS			"%d displays and %d adapters found."
+#endif
+
+#define STR_DISPLAY_HEADER			"Display %d: Name: \"%s\" Serial Number: \"%s\""
+#define STR_DISPLAY_UNSUPPORTED		"Display %d (Unsupported Monitor)"
+#define STR_VALID_EDID				"  Valid Extended Device ID (EDID) found."
+#define STR_INVALID_EDID			"  Valid Extended Device ID (EDID) NOT found."
+#define STR_VALID_CAPS				"  Valid device capabilities report found."
+#define STR_INVALID_CAPS			"  Device capabilities report NOT found."
+#define STR_SUPPORTED_CTRLS_HEADER	"  Supported Digital Controls:"
+#define STR_GAINS					"    RGB Gains"
+#define STR_BRIGHTNESS				"    Brightness"
+#define STR_CONTRAST				"    Contrast"
+#define STR_BIASES					"    Biases"
+#define STR_DDC_ENABLED				"  DDC Support Enabled"
+#define STR_DDC_FAILED_GET			"  DDC Support disabled - GET command failed."
+#define STR_DDC_FAILED_SET			"  DDC Support disabled - SET command failed."
+#define STR_DDC_FAILED_GETRANGE		"  DDC Support disabled - GETRANGE command failed."
+#define STR_DDC_NO_SUPPORT			"  DDC Not supported."
+#define STR_DDC_OTHER_ERROR			"  DDC Support disabled - Unknown error"
+#define STR_DDC_TYPE				"  DDC Type: %s"
+#define STR_ADAPTER_NAME			"  Connected on %s"
+#define STR_ADAPTER_NAME_UNKNOWN	"  Connected on unknown adapter"
+#define STR_TECHNOLOGY_CRT			"  Device technology: CRT"
+#define STR_TECHNOLOGY_LCD			"  Device technology: LCD"
+#define STR_TECHNOLOGY_REAR_PROJECTOR			"  Device technology: Rear Projector"
+#define STR_TECHNOLOGY_FRONT_PROJECTOR		"  Device technology: Front Projector"
+#define STR_TECHNOLOGY_UNKNOWN		"  Device technology: Unknown"
+#define STR_MDF_FOUND				"  Monitor Descriptor File found"
+#define STR_MDF_NOT_FOUND			"  No Monitor Descriptor File found"
+#define STR_DDC_DISABLED			"  Digital operations disabled: %s"
+#define STR_DDC_NOT_ALLOWED			"  DDC operations not currently supported for this model."
+#define STR_EDID_DIGITAL			"  EDID reports monitor running in digital mode."
+#define STR_EDID_ANALOG				"  EDID reports monitor running in analog mode."
+#endif

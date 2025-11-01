@@ -1,0 +1,1 @@
+#error obsolete - this code never worked but is still available in CVS
