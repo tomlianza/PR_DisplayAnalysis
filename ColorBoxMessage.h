@@ -1,0 +1,3 @@
+#pragma once
+
+UINT WM_COLORBOX_MESSAGE;
