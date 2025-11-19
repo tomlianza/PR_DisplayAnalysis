@@ -8,7 +8,7 @@
 //
 //#include "Pr650.h"
 #include <afxwin.h>
-#define NSPECTRALPOINTS	400
+#define NSPECTRALPOINTS	401
 typedef struct PR650_SpectralData
 {
 	short  sNpts;

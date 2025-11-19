@@ -53,7 +53,7 @@ typedef struct LUVColor {
 typedef struct LHCColor {
 	double L;
 	double H;
-	double C;
+	double Chroma;
 }LHCColor;
 
 #endif 

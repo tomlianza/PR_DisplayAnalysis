@@ -151,7 +151,7 @@ short xDelta,xCurrent;
 		bottom = cRect.bottom;
 		cDC->Rectangle(left,top,right,bottom);
 		//cDC->Rectangle(xCurrent,cRect.bottom - (int)(cRect.bottom*mp_Height[i]),((i * (long)(cRect.right))/m_SpectralData.sNpts),cRect.bottom);
-		xCurrent =(short)( (i * (cRect.right)) / m_SpectralData.sNpts);
+		xCurrent = (i * (cRect.right)) / m_SpectralData.sNpts;
 		//DeleteObject(cDC->SelectObject(myBrush));
 		} 
 
@@ -181,7 +181,7 @@ short xDelta,xCurrent;
 	cDC->MoveTo(cRect.left,cRect.top);
 	cDC->LineTo(cRect.right,cRect.top);
 	//DeleteObject(cDC->SelectObject(oldPen));
-	m_CWnd->ReleaseDC(cDC);
+	//m_CWnd->ReleaseDC(cDC);
 	
 	
 
@@ -227,9 +227,9 @@ short xDelta,xCurrent;
 	for (i = 0; i < iVisibleEnd; i++)
 	{
 
-		CWL = 380 + i*(short)deltaWL ;
+		CWL = 380 + i ;
 
-		if (CWL < 450.0)
+		if (CWL < 480.0)
 
 		{
 			r[i] = 0;
@@ -237,25 +237,24 @@ short xDelta,xCurrent;
 			b[i] = 255;
 			;
 		}
-		if ((CWL >= 450.) && (CWL < 550.))
+		if ((CWL >= 480.) && (CWL < 580.))
 
 		{
 			r[i] = 0;
-			g[i] = ((CWL-450))* 2.55;
-			//g[i] = 255;
-			b[i] = 255 -(((CWL-450))*2.55);
+			g[i] = (100-i)*2.5;
+			b[i] = 255 -(100-i)*2.5;
 		}
 
 
-		if ((CWL >= 550.) && (CWL < 650.))
+		if ((CWL >= 580.) && (CWL < 680.))
 
 		{
-			r[i] = 255;
-			g[i] = 255 - (((CWL-550)) * 2.55);
+			r[i] = (200-i)*2.5;
+			g[i] = 255 - (200 - i) * 2.5;
 			b[i] = 0;
 		}
 
-		if (CWL >= 650)
+		if (CWL >= 680)
 
 		{
 			r[i] = 255;

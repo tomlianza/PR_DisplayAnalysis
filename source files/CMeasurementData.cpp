@@ -19,7 +19,7 @@ bool  CMeasurementData::InterpolateTo1nmData()
 {
 
 	m_Interp.m_whichType = I_LINEAR;
-	m_Interp.m_npts = 1 + (m_currentMeasurement.DeviceDescriptor.dEndLamda - m_currentMeasurement.DeviceDescriptor.dStartLamda) / m_currentMeasurement.DeviceDescriptor.dLamdaIncrement;
+	m_Interp.m_npts = (short) (1 + (m_currentMeasurement.DeviceDescriptor.dEndLamda - m_currentMeasurement.DeviceDescriptor.dStartLamda) / m_currentMeasurement.DeviceDescriptor.dLamdaIncrement);
 	m_Interp.m_x = m_currentMeasurement.dWavelength;
 	m_Interp.m_y = m_currentMeasurement.dNativeSpectrum;
 	m_Interp.Init();
@@ -176,7 +176,7 @@ bool CMeasurementData::SaveBinarySimpleStatistics(CString FilePath, SIMPLESTATS 
 	char * cPath = FilePath.GetBuffer();
 	CFileException  cfProblem;
 	CString csData, csName;
-	char cBuffer[2048];
+	//char cBuffer[2048];
 	if (cfStats.Open(cPath, CFile::modeCreate | CFile::modeNoTruncate | CFile::modeWrite, &cfProblem))
 	{
 		cfStats.Write(stats, sizeof(SIMPLESTATS));

@@ -1042,7 +1042,7 @@ LHCColor * CalcLHC(LABColor *in, LHCColor *out)
 	
 	out->L =in->L;
 	out->H = atan2(in->B,in->A);
-	out->C = SQR_ROOT(SQUARE(in->B)+SQUARE(in->A));
+	out->Chroma = SQR_ROOT(SQUARE(in->B)+SQUARE(in->A));
 	return(out);
 }
 
@@ -1052,8 +1052,8 @@ XYZColor * LHC2XYZ(LHCColor *in, XYZColor *out,XYZColor *ref)
 	LABColor temp;
 	
 	temp.L = in->L;
-	temp.A = in->C*cos(in->H);
-	temp.B = in->C*sin(in->H);
+	temp.A = in->Chroma	*cos(in->H);
+	temp.B = in->Chroma *sin(in->H);
 	
 	LAB2XYZ(&temp,out,ref);
 	
