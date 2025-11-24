@@ -147,7 +147,7 @@ short xDelta,xCurrent;
 		left = xCurrent;
 		top = cRect.bottom - (int)(cRect.bottom*mp_Height[i]);	
 		//right = xCurrent+((cRect.right-cRect.left)/ m_SpectralData.sNpts);
-		right = xCurrent +2;
+		right = xCurrent +5;
 		bottom = cRect.bottom;
 		cDC->Rectangle(left,top,right,bottom);
 		//cDC->Rectangle(xCurrent,cRect.bottom - (int)(cRect.bottom*mp_Height[i]),((i * (long)(cRect.right))/m_SpectralData.sNpts),cRect.bottom);

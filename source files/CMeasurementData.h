@@ -3,6 +3,9 @@
 #include "interpolator.h"
 //#include "CPRISpectro.h"
 
+#define MAX_SPECTRAL_POINTS  1024 
+// existing type definitions...
+
 typedef enum DeviceType
 {
 	PR7x0 = 0,
